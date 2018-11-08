@@ -1,0 +1,13 @@
+SELECT veiculo.placa, motorista.nome, motorista.cpf, motorista.idade
+FROM viagem
+INNER JOIN viagem ON viagem.viagemid = 2;
+
+SELECT motorista.nome, motorista.cpf
+FROM motorista
+WHERE motorista.id = viagem.motoristaId
+ORDER BY motorista.nome
+
+SELECT motorista.nome
+FROM motorista
+INNER JOIN veiculo ON veiculo.cor 
+WHERE veiculo.cor LIKE 'B%'
